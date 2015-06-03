@@ -83,7 +83,7 @@ static DDNSLoggerLogger *sharedInstance;
         }
 
         LogMessageF([logMessage.file cStringUsingEncoding:NSASCIIStringEncoding],
-                    logMessage.line,
+                    (int)logMessage.line,
                     [logMessage.function cStringUsingEncoding:NSASCIIStringEncoding],
                     logMessage.fileName,
                     nsloggerLogLevel, @"%@", logMsg);
